@@ -1,26 +1,23 @@
-// swift-tools-version: 5.7
-// The swift-tools-version declares the minimum version of Swift required to build this package.
+// swift-tools-version: 5.6
 
 import PackageDescription
 
 let package = Package(
     name: "yrs-swift-experiment",
     products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "yrs-swift-experiment",
             targets: ["yrs-swift-experiment"]),
     ],
     dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
+        .package(url: "https://github.com/heckj/YrsC", from: "0.11.2-alpha1"),
     ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "yrs-swift-experiment",
-            dependencies: []),
+            dependencies: [
+                .product(name: "YrsC", package: "YrsC"),
+            ]),
         .testTarget(
             name: "yrs-swift-experimentTests",
             dependencies: ["yrs-swift-experiment"]),
