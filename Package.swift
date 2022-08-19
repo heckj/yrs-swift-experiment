@@ -24,6 +24,9 @@ let package = Package(
             ]),
         .testTarget(
             name: "yrs-swift-experimentTests",
-            dependencies: ["yrs-swift-experiment"]),
+            dependencies: [
+                .product(name: "YrsC", package: "YrsC"),
+                "yrs-swift-experiment"
+            ]),
     ]
 )
