@@ -4,6 +4,10 @@ import PackageDescription
 
 let package = Package(
     name: "yrs-swift-experiment",
+    platforms: [
+        .iOS(.v12),
+        .macOS(.v10_10),
+    ],
     products: [
         .library(
             name: "yrs-swift-experiment",
