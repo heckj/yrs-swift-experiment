@@ -4,7 +4,9 @@
 // https://github.com/y-crdt/y-crdt/blob/main/tests-ffi/main.cpp
 
 // ref: https://developer.apple.com/documentation/swift/using-imported-c-functions-in-swift
-// example: https://github.com/jpsim/Yams
+// ref: https://github.com/apple/swift/blob/main/docs/HowSwiftImportsCAPIs.md
+
+// C example code: https://github.com/jpsim/Yams
 // - https://github.com/jpsim/Yams/blob/main/Sources/Yams/Parser.swift
 // - https://github.com/jpsim/Yams/blob/main/Sources/Yams/YamlError.swift
 

@@ -15,7 +15,7 @@ final class yrs_swift_experimentTests: XCTestCase {
         
         let d1 = YrsDoc(1)
         let t1 = YrsTransaction(d1)
-        //let txt1: UnsafeMutablePointer<Branch> = ytext(t1, "test")
+        let txt1: UnsafeMutablePointer<Branch> = ytext(t1._YTransaction, "test")
         
         /*
          TEST_CASE("Update exchange basic") {
