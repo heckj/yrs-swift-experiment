@@ -12,38 +12,37 @@
 
 public class YrsDoc {
     let _YDoc: UnsafeMutablePointer<YDoc>
-    
+
     public init(_ id: UInt) {
         let opts = YOptions(id: id, encoding: Y_OFFSET_UTF16, skip_gc: 0)
         _YDoc = ydoc_new_with_options(opts)
-        //let doc = _YDoc.pointee
+        // let doc = _YDoc.pointee
     }
-    
+
     public init?() {
         if let maybeDoc = ydoc_new() {
             _YDoc = maybeDoc
         }
         return nil
     }
-    
+
     deinit {
         ydoc_destroy(_YDoc)
     }
-        
 }
 
 /// A read-write transaction for a given document.
 public class YrsTransaction {
     let _YTransaction: UnsafeMutablePointer<YTransaction>
-    
+
     init(_ doc: YrsDoc) {
         _YTransaction = ytransaction_new(doc._YDoc)
     }
-        
+
     deinit {
         _YTransaction.deallocate()
     }
-    
+
     func commit() {
         ytransaction_commit(_YTransaction)
     }
@@ -55,7 +54,7 @@ public struct yrs_swift_experiment {
     public init() {
         if let x: UnsafeMutablePointer<YDoc> = ydoc_new() {
             // do stuff here
-            
+
             ydoc_destroy(x)
         }
     }

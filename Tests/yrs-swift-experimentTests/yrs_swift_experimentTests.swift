@@ -10,13 +10,12 @@ final class yrs_swift_experimentTests: XCTestCase {
         // results.
         XCTAssertEqual(yrs_swift_experiment().text, "Hello, World!")
     }
-    
+
     func update_exchange_basic() throws {
-        
         let d1 = YrsDoc(1)
         let t1 = YrsTransaction(d1)
         let txt1: UnsafeMutablePointer<Branch> = ytext(t1._YTransaction, "test")
-        
+
         /*
          TEST_CASE("Update exchange basic") {
              // init
@@ -1023,7 +1022,6 @@ final class yrs_swift_experimentTests: XCTestCase {
      REQUIRE(t->delta[1].tag == Y_EVENT_CHANGE_ADD);
      REQUIRE(t->delta[1].len == 1);
 
-
      // free the observer and make sure that callback is no longer called
      yxml_test_clean(t);
      yxmlelem_unobserve(xml, sub);
@@ -1302,7 +1300,6 @@ final class yrs_swift_experimentTests: XCTestCase {
      ydoc_destroy(doc2);
      free(t);
  }
-
 
  int ystate_vector_eq(YStateVector* a, YStateVector* b) {
      if (a->entries_count != b->entries_count)

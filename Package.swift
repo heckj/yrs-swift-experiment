@@ -11,7 +11,8 @@ let package = Package(
     products: [
         .library(
             name: "yrs-swift-experiment",
-            targets: ["yrs-swift-experiment"]),
+            targets: ["yrs-swift-experiment"]
+        ),
     ],
     dependencies: [
         .package(url: "https://github.com/heckj/YrsC", from: "0.11.2-alpha1"),
@@ -21,12 +22,14 @@ let package = Package(
             name: "yrs-swift-experiment",
             dependencies: [
                 .product(name: "YrsC", package: "YrsC"),
-            ]),
+            ]
+        ),
         .testTarget(
             name: "yrs-swift-experimentTests",
             dependencies: [
                 .product(name: "YrsC", package: "YrsC"),
-                "yrs-swift-experiment"
-            ]),
+                "yrs-swift-experiment",
+            ]
+        ),
     ]
 )
